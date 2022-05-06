@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://jiinxx007:Yeshrajawat123@cluster0.zk9pb.mongodb.net/KHELOINDIA?retryWrites=true&w=majority');
+const URL = `mongodb+srv://jiinxx007:${process.env.DB_HOSTNAME_PASSWORD}@cluster0.zk9pb.mongodb.net/KHELOINDIA?retryWrites=true&w=majority`;
+console.log(URL);
+mongoose.connect(URL,{
+    useNewUrlParser:true
+});
 
 const db = mongoose.connection;
 db.on('error',console.error.bind('console','Error while connecting to the MongoDB'));

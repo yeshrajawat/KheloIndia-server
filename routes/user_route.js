@@ -8,4 +8,7 @@ router.post('/signup',userController.signup);
 router.post('/login',userController.login);
 router.get('/',userController.verifytoken,userController.profile);
 
+//verfiy Token
+
+
 module.exports = router;
