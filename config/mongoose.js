@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const URL = `mongodb+srv://jiinxx007:${process.env.DB_HOSTNAME_PASSWORD}@cluster0.zk9pb.mongodb.net/KHELOINDIA?retryWrites=true&w=majority`;
-console.log(URL);
+
 mongoose.connect(URL,{
     useNewUrlParser:true
 });

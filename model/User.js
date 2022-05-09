@@ -24,6 +24,19 @@ UserSchema = new mongoose.Schema({
         required:[true,'Please add a User'],
         minlength:6
     }
+    ,tendersApplied:[{
+        tenderId:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Tender',
+
+        },
+        bidPrice:{
+            type:Number,
+
+        }
+       
+
+    }]
 });
 
 const User = mongoose.model('User',UserSchema);
